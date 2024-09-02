@@ -96,7 +96,7 @@ export default function LandingView() {
 					<Globe
 						className={cn(
 							'absolute transform -translate-x-1/2',
-							'md:bottom-[-280px] md:left-1/4',
+							'md:bottom-[-220px] md:left-1/4',
 							'sm:bottom-[-150px] sm:left-1/2 xs:bottom-[-100px] xs:left-1/2'
 						)}
 					/>
