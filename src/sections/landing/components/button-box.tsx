@@ -1,10 +1,11 @@
-import { MailIcon, Send } from 'lucide-react';
+import { MailIcon, Send, Instagram } from 'lucide-react';
 
 // MUI
 import { Box } from '@mui/material';
 
 //components
 import { Dock, DockIcon } from '@/components/magicui/dock';
+import { ShinyButton } from '@/components/magicui';
 
 // ----------------------------------------------------------------------
 
@@ -12,21 +13,37 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export default function ButtonBox() {
 	return (
-		<Box sx={{ position: 'relative', mb: { sm: 2, xs: 2 } }}>
-			<Dock direction='middle'>
-				<DockIcon href='mailto:mahdimoghassemi@gmail.com'>
-					<Icons.email className='size-6' />
-				</DockIcon>
-				<DockIcon href='https://github.com/mahdimoghassemi'>
-					<Icons.gitHub className='size-6' />
-				</DockIcon>
-				<DockIcon href='https://www.linkedin.com/in/mahdi-moghassemi-317a47292/'>
-					<Icons.linkedin className='size-6' />
-				</DockIcon>
-				<DockIcon href='https://t.me/mahdimoghassemi'>
-					<Icons.telegram className='size-6' />
-				</DockIcon>
-			</Dock>
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				justifyContent: 'center',
+				alignItems: 'center',
+				mb: { sm: 2, xs: 2 },
+			}}>
+			<Box sx={{ position: 'relative', mb: 1 }}>
+				<Dock direction='middle'>
+					<DockIcon href='mailto:mahdimoghassemi@gmail.com'>
+						<Icons.email className='size-6' />
+					</DockIcon>
+					<DockIcon href='https://github.com/mahdimoghassemi'>
+						<Icons.gitHub className='size-6' />
+					</DockIcon>
+					<DockIcon href='https://www.linkedin.com/in/mahdi-moghassemi-317a47292/'>
+						<Icons.linkedin className='size-6' />
+					</DockIcon>
+					<DockIcon href='https://t.me/mahdimoghassemi'>
+						<Icons.telegram className='size-6' />
+					</DockIcon>
+					<DockIcon href='https://instagram.com/mahdimoghassemi'>
+						<Icons.instagram className='size-6' />
+					</DockIcon>
+				</Dock>
+			</Box>
+			<ShinyButton
+				resumeUrl='/CV/MahdiMoghassemiCV.pdf'
+				text='Download CV'
+			/>
 		</Box>
 	);
 }
@@ -55,4 +72,5 @@ const Icons = {
 		</svg>
 	),
 	telegram: (props: IconProps) => <Send {...props} />,
+	instagram: (props: IconProps) => <Instagram {...props} />,
 };

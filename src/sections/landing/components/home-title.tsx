@@ -24,7 +24,7 @@ export default function HomeTitle() {
 			<Typography
 				sx={{
 					textAlign: { xs: 'center' },
-					fontSize: { md: '1.5rem', xs: '1rem' },
+					fontSize: { md: '1.5rem', sm: '1rem', xs: '.8rem' },
 				}}
 				variant='h6'>
 				A <strong>computer engineer</strong> and a seeker of knowledge.
@@ -33,7 +33,7 @@ export default function HomeTitle() {
 			<Typography
 				sx={{
 					textAlign: { xs: 'center' },
-					fontSize: { md: '1.5rem', xs: '1rem' },
+					fontSize: { md: '1.5rem', sm: '1rem', xs: '.8rem' },
 				}}
 				variant='h6'>
 				Passionate about building things and helping others.
@@ -42,7 +42,7 @@ export default function HomeTitle() {
 			<Typography
 				sx={{
 					textAlign: { xs: 'center' },
-					fontSize: { md: '1.5rem', xs: '1rem' },
+					fontSize: { md: '1.5rem', sm: '1rem', xs: '.8rem' },
 				}}
 				variant='h6'>
 				Forever learning and exploring.
