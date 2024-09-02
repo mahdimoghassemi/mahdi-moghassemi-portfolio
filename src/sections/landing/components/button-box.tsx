@@ -12,7 +12,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export default function ButtonBox() {
 	return (
-		<Box sx={{ position: 'relative' }}>
+		<Box sx={{ position: 'relative', mb: { sm: 2, xs: 2 } }}>
 			<Dock direction='middle'>
 				<DockIcon href='mailto:mahdimoghassemi@gmail.com'>
 					<Icons.email className='size-6' />

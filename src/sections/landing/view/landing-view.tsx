@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 
 // MUI
-import { Box, Container, styled } from '@mui/material';
+import { Grid, Box, Container, styled } from '@mui/material';
 
 // components
 import { Globe, DotPattern } from '@/components/magicui';
@@ -40,32 +40,39 @@ export default function LandingView() {
 				width: '100%',
 				height: '100vh',
 				overflow: 'hidden',
+				background: 'white',
 			}}>
 			<Container
 				sx={{
-					display: 'flex',
-					flexDirection: 'row',
-					justifyContent: 'space-between',
-					mt: 8,
+					mt: { md: 8, sm: 4, xs: 4 },
 				}}>
-				<FadeInBox
-					show={show}
-					sx={{ width: 'auto' }}>
-					<HomeTitle />
-				</FadeInBox>
-				<Box
-					sx={{
-						width: '25%',
-						display: 'flex',
-						flexDirection: 'column',
-					}}>
-					<FadeInBox
-						show={show}
-						sx={{ width: '100%' }}>
-						<ImageContainer />
-						<ButtonBox />
-					</FadeInBox>
-				</Box>
+				<Grid
+					container
+					spacing={3}>
+					<Grid
+						item
+						xs={12}
+						sm={12}
+						md={9}>
+						<FadeInBox
+							show={show}
+							sx={{ width: '100%' }}>
+							<HomeTitle />
+						</FadeInBox>
+					</Grid>
+					<Grid
+						item
+						xs={12}
+						sm={12}
+						md={3}>
+						<FadeInBox
+							show={show}
+							sx={{ width: '100%' }}>
+							<ImageContainer />
+							<ButtonBox />
+						</FadeInBox>
+					</Grid>
+				</Grid>
 			</Container>
 
 			<DotPattern
@@ -76,7 +83,7 @@ export default function LandingView() {
 			<Box
 				sx={{
 					width: '100%',
-					height: '47vh',
+					height: { md: '55vh', sm: '50vh', xs: '40vh' },
 					display: 'flex',
 					flexDirection: 'column',
 					justifyContent: 'flex-end',
@@ -86,7 +93,13 @@ export default function LandingView() {
 				<FadeInBox
 					show={show}
 					sx={{ position: 'relative' }}>
-					<Globe className='absolute bottom-[-280px] left-1/4 transform -translate-x-1/2' />
+					<Globe
+						className={cn(
+							'absolute transform -translate-x-1/2',
+							'md:bottom-[-280px] md:left-1/4',
+							'sm:bottom-[-150px] sm:left-1/2 xs:bottom-[-100px] xs:left-1/2'
+						)}
+					/>
 				</FadeInBox>
 			</Box>
 		</Box>

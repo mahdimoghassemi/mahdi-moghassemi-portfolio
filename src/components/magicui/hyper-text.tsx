@@ -70,13 +70,15 @@ export default function HyperText({
 		<div
 			className='overflow-hidden flex cursor-default scale-100 items-center'
 			onMouseEnter={triggerAnimation}>
-			{emoji && <span className='text-[4rem] mr-2'>{emoji}</span>}
+			{emoji && (
+				<span className='text-[2rem] md:text-[4rem] mr-2'>{emoji}</span>
+			)}
 			<AnimatePresence mode='wait'>
 				{displayText.map((letter, i) => (
 					<motion.h1
 						key={i}
 						className={cn(
-							'text-[4rem]',
+							'text-[2rem] md:text-[4rem]',
 							letter === ' ' ? 'w-3' : '',
 							className
 						)}

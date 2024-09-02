@@ -7,24 +7,37 @@ import { HyperText } from '@/components/magicui';
 
 export default function HomeTitle() {
 	return (
-		<Box sx={{ display: 'flex', alignItems: 'center' }}>
-			<Box sx={{ flex: 1 }}>
-				<HyperText
-					text='Hello World! '
-					emoji='👋'
-				/>
-				<HyperText text={`I'm Mahdi Moghassemi \b`} />
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: { md: 'start', sm: 'center', xs: 'center' },
+				mb: { sm: 2 },
+			}}>
+			<HyperText
+				text='Hello World! '
+				emoji='👋'
+			/>
 
-				<Typography variant='h6'>
-					A <strong>computer engineer</strong> and a seeker of knowledge.
-				</Typography>
+			<HyperText text={`I'm Mahdi Moghassemi \b`} />
 
-				<Typography variant='h6'>
-					Passionate about building things and helping others.
-				</Typography>
+			<Typography
+				sx={{ fontSize: { xs: '1rem' } }}
+				variant='h6'>
+				A <strong>computer engineer</strong> and a seeker of knowledge.
+			</Typography>
 
-				<Typography variant='h6'>Forever learning and exploring.</Typography>
-			</Box>
+			<Typography
+				sx={{ fontSize: { xs: '1rem' } }}
+				variant='h6'>
+				Passionate about building things and helping others.
+			</Typography>
+
+			<Typography
+				sx={{ fontSize: { xs: '1rem' } }}
+				variant='h6'>
+				Forever learning and exploring.
+			</Typography>
 		</Box>
 	);
 }
