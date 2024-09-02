@@ -47,7 +47,7 @@ export default function Globe({
 
 	const updatePointerInteraction = (value: any) => {
 		pointerInteracting.current = value;
-		canvasRef.current!.style.cursor = value ? 'grabbing' : 'grab';
+		// canvasRef.current!.style.cursor = value ? 'grabbing' : 'grab';
 	};
 
 	const updateMovement = (clientX: any) => {

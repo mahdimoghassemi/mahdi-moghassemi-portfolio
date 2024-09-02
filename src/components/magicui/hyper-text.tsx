@@ -68,7 +68,8 @@ export default function HyperText({
 
 	return (
 		<div
-			className='overflow-hidden flex cursor-default scale-100 items-center'
+			className='overflow-hidden flex scale-100 items-center'
+			// className='overflow-hidden flex cursor-default scale-100 items-center'
 			onMouseEnter={triggerAnimation}>
 			{emoji && (
 				<span className='text-[1.5rem] md:text-[4rem] mr-2'>{emoji}</span>
