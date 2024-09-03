@@ -44,7 +44,7 @@ const slugs = [
 
 export default function SkillView() {
   return (
-    <Box sx={{ backgroundColor: "#1e2a38" }}>
+    <Box sx={{ backgroundColor: "#1e2a38", overflow: "hidden" }}>
       <Box
         sx={{
           display: "flex",
