@@ -1,14 +1,14 @@
 // sections
-import { LandingView } from "@/sections/landing/view";
-import { SkillView } from "@/sections/skills/view";
+import { AboutMeView, LandingView, SkillView } from '@/sections';
 
 // ----------------------------------------------------------------------
 
 export default function Home() {
-  return (
-    <>
-      <LandingView />
-      <SkillView />
-    </>
-  );
+	return (
+		<>
+			<LandingView />
+			<AboutMeView />
+			<SkillView />
+		</>
+	);
 }

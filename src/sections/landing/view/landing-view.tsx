@@ -49,6 +49,7 @@ export default function LandingView() {
 			/>
 
 			<Container
+				maxWidth='lg'
 				sx={{
 					mt: { md: 8, sm: 4, xs: 4 },
 				}}>
