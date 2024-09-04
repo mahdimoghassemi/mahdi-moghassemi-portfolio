@@ -50,13 +50,13 @@ export default function SkillView() {
 				backgroundColor: '#F5F5F5',
 				overflow: 'hidden',
 			}}>
-			<Particles
+			{/* <Particles
 				className='absolute inset-0'
 				quantity={200}
 				ease={80}
 				color={'#000000'}
 				refresh
-			/>
+			/> */}
 			<Box
 				sx={{
 					display: 'flex',
