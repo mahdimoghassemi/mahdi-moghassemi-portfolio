@@ -59,7 +59,7 @@ export default function SkillView() {
 			/> */}
 			<Container
 				sx={{
-					height: { xs: '140vh', md: '140vh', lg: '100vh' },
+					height: { xs: '130vh', md: '140vh', lg: '100vh' },
 					display: 'flex',
 					flexDirection: {
 						lg: 'row',
@@ -67,7 +67,7 @@ export default function SkillView() {
 						sm: 'column',
 						xs: 'column',
 					},
-					justifyContent: 'space-between',
+					justifyContent: { md: 'space-between', xs: 'space-around' },
 					alignItems: 'center',
 				}}>
 				<SkillContainer />

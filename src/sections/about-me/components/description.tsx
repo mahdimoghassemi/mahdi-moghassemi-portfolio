@@ -7,28 +7,38 @@ const Description = () => {
 	return (
 		<Container
 			sx={{
-				height: { xs: '140vh', md: '100vh' },
+				height: { xs: '110vh', md: '100vh' },
 				display: 'flex',
 				flexDirection: 'column',
 				justifyContent: 'center',
+				padding: { xs: 2, sm: 3, md: 4 },
 			}}>
 			<Typography
 				variant='h4'
-				sx={{ mb: 4, color: 'rgba(255, 255, 255, 0.7)' }}>
+				sx={{
+					mb: { xs: 2, sm: 3, md: 4 },
+					color: 'rgba(255, 255, 255, 0.7)',
+					fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+				}}>
 				ABOUT ME 👩‍💻
 			</Typography>
 			<Typography
 				variant='h6'
-				sx={{ mb: 4, color: 'rgba(255, 255, 255, 0.5)' }}>
+				sx={{
+					mb: { xs: 2, sm: 3, md: 4 },
+					color: 'rgba(255, 255, 255, 0.5)',
+					fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+				}}>
 				AI & ML Enthusiast with a Strong Foundation in Front-End Development
 			</Typography>
 			<Typography
 				variant='body1'
 				sx={{
-					mb: 2,
+					mb: { xs: 1, sm: 2, md: 3 },
 					color: 'rgba(255, 255, 255, 0.7)',
 					lineHeight: 1.8,
 					textAlign: 'justify',
+					fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' },
 				}}>
 				From the early stages of my education, recognizing the expanding
 				software industry and the increasing demand for software engineers in
@@ -49,6 +59,7 @@ const Description = () => {
 					color: 'rgba(255, 255, 255, 0.7)',
 					lineHeight: 1.8,
 					textAlign: 'justify',
+					fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' },
 				}}>
 				During my final year at university, I discovered a strong interest in
 				machine learning. I collaborated on facial detection projects using
