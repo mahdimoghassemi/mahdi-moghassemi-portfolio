@@ -19,7 +19,7 @@ export default function HomeTitle() {
 				emoji='👋'
 			/>
 
-			<HyperText text={`I'm Mahdi Moghassemi \b`} />
+			<HyperText text={`I'm Mahdi Moghassemi`} />
 
 			<Typography
 				sx={{
