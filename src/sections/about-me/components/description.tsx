@@ -7,7 +7,7 @@ const Description = () => {
 	return (
 		<Container
 			sx={{
-				height: '100vh',
+				height: { xs: '140vh', md: '100vh' },
 				display: 'flex',
 				flexDirection: 'column',
 				justifyContent: 'center',

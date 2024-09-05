@@ -11,7 +11,7 @@ export default function ImageContainer() {
 				flexDirection: 'column',
 				justifyContent: 'center',
 				alignItems: 'center',
-				mt: { xs: 4 },
+				mt: { xs: 4, sm: 0 },
 			}}>
 			<img
 				src='images/ME.jpg'

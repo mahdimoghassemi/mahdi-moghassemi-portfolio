@@ -1,5 +1,5 @@
 // MUI
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 
 // components
 import { SkillContainer } from '../components';
@@ -57,17 +57,22 @@ export default function SkillView() {
 				color={'#000000'}
 				refresh
 			/> */}
-			<Box
+			<Container
 				sx={{
+					height: { xs: '140vh', md: '140vh', lg: '100vh' },
 					display: 'flex',
-					flexDirection: 'row',
+					flexDirection: {
+						lg: 'row',
+						md: 'column',
+						sm: 'column',
+						xs: 'column',
+					},
 					justifyContent: 'space-between',
 					alignItems: 'center',
-					padding: '0 4rem',
 				}}>
 				<SkillContainer />
 				<IconCloud iconSlugs={slugs} />
-			</Box>
+			</Container>
 		</Box>
 	);
 }

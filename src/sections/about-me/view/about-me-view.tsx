@@ -13,7 +13,7 @@ export default function AboutMeView() {
 			sx={{
 				position: 'relative',
 				backgroundColor: '#1e2a38',
-				height: '100vh',
+				height: { xs: '140vh', md: '100vh' },
 				overflow: 'hidden',
 			}}>
 			<Meteors number={30} />
