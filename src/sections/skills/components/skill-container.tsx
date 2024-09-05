@@ -65,6 +65,16 @@ const sections = [
 	},
 ];
 
+// Define fixed widths array
+const fixedWidths: string[] = [
+	'20px',
+	'50px',
+	'80px',
+	'110px',
+	'140px',
+	'160px',
+];
+
 const gradients: string[] = [
 	'linear-gradient(to right, #f44336, #ff5722)',
 	'linear-gradient(to right, #9c27b0, #673ab7)',
@@ -86,9 +96,6 @@ const lineSegment = (width: string, gradient: string) => ({
 	position: 'relative',
 });
 
-const getRandomWidth = (): string =>
-	`${Math.floor(Math.random() * 160 + 10)}px`;
-
 const getRandomGradient = (): string =>
 	gradients[Math.floor(Math.random() * gradients.length)];
 
@@ -97,6 +104,9 @@ const getRandomLineCount = (): number => Math.floor(Math.random() * 5 + 3);
 const SkillContainer = () => {
 	const top_rows = Array.from({ length: 2 }, () => getRandomLineCount());
 	const bottom_rows = Array.from({ length: 3 }, () => getRandomLineCount());
+
+	// Cycle through fixed widths
+	let widthIndex = 0;
 
 	return (
 		<Box
@@ -120,24 +130,28 @@ const SkillContainer = () => {
 						gap: '1rem',
 						marginBottom: '1rem',
 					}}>
-					{Array.from({ length: lineCount }).map((_, index) => (
-						<Box
-							key={index}
-							sx={lineSegment(getRandomWidth(), getRandomGradient())}>
-							{index % 2 === 0 && (
-								<Box
-									sx={{
-										width: 10,
-										height: 10,
-										borderRadius: '50%',
-										backgroundColor: 'rgba(0, 0, 0, 0.3)',
-										position: 'absolute',
-										right: '-10px',
-									}}
-								/>
-							)}
-						</Box>
-					))}
+					{Array.from({ length: lineCount }).map((_, index) => {
+						const width = fixedWidths[widthIndex % fixedWidths.length];
+						widthIndex++;
+						return (
+							<Box
+								key={index}
+								sx={lineSegment(width, getRandomGradient())}>
+								{index % 2 === 0 && (
+									<Box
+										sx={{
+											width: 10,
+											height: 10,
+											borderRadius: '50%',
+											backgroundColor: 'rgba(0, 0, 0, 0.3)',
+											position: 'absolute',
+											right: '-10px',
+										}}
+									/>
+								)}
+							</Box>
+						);
+					})}
 				</Box>
 			))}
 
@@ -180,28 +194,32 @@ const SkillContainer = () => {
 						display: 'flex',
 						flexWrap: 'wrap',
 						flexDirection: 'row',
-						gap: '2rem',
+						gap: '1rem',
 						marginBottom: '1rem',
 					}}>
-					{Array.from({ length: lineCount }).map((_, index) => (
-						<Box
-							key={index}
-							sx={lineSegment(getRandomWidth(), getRandomGradient())}>
-							{index % 2 !== 0 && (
-								<Box
-									sx={{
-										width: 10,
-										height: 10,
-										borderRadius: '50%',
-										backgroundColor: 'rgba(0, 0, 0, 0.3)',
-										position: 'absolute',
-										right: '-10px',
-										marginLeft: '2px',
-									}}
-								/>
-							)}
-						</Box>
-					))}
+					{Array.from({ length: lineCount }).map((_, index) => {
+						const width = fixedWidths[widthIndex % fixedWidths.length];
+						widthIndex++;
+						return (
+							<Box
+								key={index}
+								sx={lineSegment(width, getRandomGradient())}>
+								{index % 2 !== 0 && (
+									<Box
+										sx={{
+											width: 10,
+											height: 10,
+											borderRadius: '50%',
+											backgroundColor: 'rgba(0, 0, 0, 0.3)',
+											position: 'absolute',
+											right: '-10px',
+											marginLeft: '2px',
+										}}
+									/>
+								)}
+							</Box>
+						);
+					})}
 				</Box>
 			))}
 		</Box>
